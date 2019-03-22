@@ -10,10 +10,10 @@ from login import models
 
 # user_list = []
 
+
 # 定义视图函数
 def index(request):  # 第一个参数必须是request。request参数封装了用户请求的所有内容
     # return HttpResponse('hello world')  # 不能直接返回字符串，必须由这个类封装起来，才能被HTTP协议识别
-
 
     if request.method == "POST":
         username = request.POST.get('username')
@@ -32,19 +32,19 @@ def index(request):  # 第一个参数必须是request。request参数封装了�
     #  {'data': user_list} 将用户列表作为上下文参数供render渲染index页面
 
 
-def index2(request):
-    # 进行处理，和M及T进行交互
-    # return HttpResponse('something')
-
-    # 使用模板文件
-    # 1、加载模板文件，模板对象
-    temp = loader.get_template('login/index.html')
-    # 2、定义模板上下文：给模板文件传递数据
-    context = RequestContext(request, {})
-    # 3、模板渲染：产生标准的html内容
-    res_html = temp.render(context)
-    # 4、返回给浏览器
-    return HttpResponse(res_html)
+# def index2(request):
+#     # 进行处理，和M及T进行交互
+#     # return HttpResponse('something')
+#
+#     # 使用模板文件
+#     # 1、加载模板文件，模板对象
+#     temp = loader.get_template('login/index.html')
+#     # 2、定义模板上下文：给模板文件传递数据
+#     context = RequestContext(request, {})
+#     # 3、模板渲染：产生标准的html内容
+#     res_html = temp.render(context)
+#     # 4、返回给浏览器
+#     return HttpResponse(res_html)
 
 
 

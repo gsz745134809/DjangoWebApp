@@ -78,24 +78,24 @@ WSGI_APPLICATION = 'DjangoWebApp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # 指定使用的数据库类型，例如mysql
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),  # django自带轻量级数据库sqlite3
-    }
-}
-
-# 如果使用mysql
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',  # 指定使用的数据库类型，例如mysql
-#         'NAME': os.path.join(BASE_DIR, 'db.mysql'),
-#         'USER': 'root',
-#         'PASSWORD': 'mysql',
-#         'HOST': 'localhost',
-#         'PORT': 3306
+#         'ENGINE': 'django.db.backends.sqlite3',  # 指定使用的数据库类型，例如mysql
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),  # django自带轻量级数据库sqlite3
 #     }
 # }
+
+# 如果使用mysql
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',  # 指定使用的数据库类型，例如mysql
+        'NAME': 'mysqltest',  # 使用的数据库的名字，数据库必须手动创建
+        'USER': 'root',  # 连接mysql的用户名
+        'PASSWORD': 'root',  # 用户对应的密码
+        'HOST': 'localhost',  # 指定mysql数据库所在电脑ip
+        'PORT': 3306,  # mysql服务的端口
+    }
+}
 
 
 
