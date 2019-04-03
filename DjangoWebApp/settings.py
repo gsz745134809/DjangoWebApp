@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'DjangoWebApp.wsgi.application'
 #     }
 # }
 
-# 如果使用mysql
+# 使用mysql
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 指定使用的数据库类型，例如mysql
@@ -97,7 +97,20 @@ DATABASES = {
     }
 }
 
-
+# 使用 SQL Server 2012
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'sqlserver',
+#         'NAME': 'testforsql',
+#         'USER': 'sa',
+#         'PASSWORD': 'root',
+#         'HOST': 'localhost',
+#         'PORT': 1433,
+#         'OPTIONS':{
+#               'driver':'SQL Server Native Client 10.0',
+#         }
+#     }
+# }
 
 
 
